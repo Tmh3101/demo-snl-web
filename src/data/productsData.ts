@@ -126,8 +126,8 @@ const product1: Product = {
             position: "right",
             actions: [
                 { icon: "water_drop", label: "Tưới nước" },
-                { icon: "eco", label: "Phủ mùn" },
-                { icon: "bug_report", label: "Kiểm soát", variant: "warning" },
+                { icon: "agriculture", label: "Làm cỏ" },
+                { icon: "bug_report", label: "Sâu bệnh", variant: "warning" },
             ],
             activities: [
                 { date: "05/03/2020", time: "05:00", action: "Làm cỏ", type: "agriculture" },
@@ -144,8 +144,9 @@ const product1: Product = {
                 "https://lh3.googleusercontent.com/aida-public/AB6AXuC8GQagvd9vPrXGiPjfaf43sjg_sdPQ1haeDyxM2uaOYdplnb3_iLwtdjsEEf3RsjeOoRm_dcUNtWq321RiBDIeEmZG33i54NMbbK5YbYFxwJzUFp3x2Wkx75Gf5eqfJHKfpHm5QRm9KodEUjQ7poIohqkOAIMnNvCf0_CCbP92BUd7sN6ZCdpZcN8Rzq5B1TY9XnP6-TiZK0cfmzxKvsO32GKJF31rXPV194hevtBYn-E0BMiaP0T4VkHpEDwHGGxNYgne5mDF4-k",
             position: "left",
             actions: [
-                { icon: "scale", label: "Định lượng" },
-                { icon: "qr_code_2", label: "Mã hóa" },
+                { icon: "water_drop", label: "Tưới nước" },
+                { icon: "agriculture", label: "Làm cỏ" },
+                { icon: "bug_report", label: "Sâu bệnh", variant: "warning" },
             ],
             activities: [
                 { date: "15/01/2025", time: "06:00", action: "Thu hoạch", type: "agriculture" },
@@ -178,6 +179,7 @@ const product2: Product = {
             actions: [
                 { icon: "water_drop", label: "Tưới nước" },
                 { icon: "agriculture", label: "Làm cỏ" },
+                { icon: "bug_report", label: "Sâu bệnh", variant: "warning" },
             ],
             activities: [
                 { date: "10/02/2018", time: "07:00", action: "Gieo hạt", type: "agriculture" },
@@ -193,8 +195,9 @@ const product2: Product = {
                 "https://lh3.googleusercontent.com/aida-public/AB6AXuAZs4KuzI8PFUm7QWSTKski8whZdLD6B1iO-DOeBMvzEFxOcW-kDYtcYr55ANGzLzxSQQTXRdr7I3YseRZEkag5rFvtnUj8ZftYfXf-iqoQIzQVW_MoDokYlJjdzGC12Gvgx2adQ3Nh0Bw7kr2jxiUDPUs2Ea-k7php5_0Z9WTU9x0y-ccSIGVkbyA2cHc4KHrYixZHR4-kEfapPfM7-TrCsEmQKBIgaEDk4QLcOh8dj1zPVrNxiXco2J9LzSgoCjpNSsmGFKQA4AI",
             position: "right",
             actions: [
-                { icon: "eco", label: "Phủ mùn" },
                 { icon: "water_drop", label: "Tưới nước" },
+                { icon: "agriculture", label: "Làm cỏ" },
+                { icon: "bug_report", label: "Sâu bệnh", variant: "warning" },
             ],
             activities: [
                 { date: "01/04/2023", time: "05:30", action: "Di chuyển", type: "agriculture" },
@@ -227,6 +230,7 @@ const product3: Product = {
             actions: [
                 { icon: "water_drop", label: "Tưới nước" },
                 { icon: "agriculture", label: "Làm cỏ" },
+                { icon: "bug_report", label: "Sâu bệnh", variant: "warning" },
             ],
             activities: [
                 { date: "20/03/2021", time: "07:00", action: "Gieo hạt", type: "agriculture" },
@@ -244,8 +248,8 @@ const product3: Product = {
             position: "right",
             actions: [
                 { icon: "water_drop", label: "Tưới nước" },
-                { icon: "eco", label: "Bón phân" },
-                { icon: "bug_report", label: "Phòng bệnh", variant: "warning" },
+                { icon: "agriculture", label: "Làm cỏ" },
+                { icon: "bug_report", label: "Sâu bệnh", variant: "warning" },
             ],
             activities: [
                 { date: "15/01/2024", time: "06:00", action: "Tưới nước", type: "water" },
@@ -278,7 +282,8 @@ const product4: Product = {
             position: "left",
             actions: [
                 { icon: "water_drop", label: "Tưới nước" },
-                { icon: "agriculture", label: "Che phủ" },
+                { icon: "agriculture", label: "Làm cỏ" },
+                { icon: "bug_report", label: "Sâu bệnh", variant: "warning" },
             ],
             activities: [
                 { date: "10/11/2024", time: "06:00", action: "Gieo hạt", type: "agriculture" },

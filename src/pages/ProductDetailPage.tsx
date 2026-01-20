@@ -74,7 +74,6 @@ const ProductDetailPage: FC = () => {
                 <Footer
                     productCode={product.productCode}
                     blockchainHash={product.blockchainHash}
-                    companyName={product.distributorData.name}
                 />
             </main>
         </>

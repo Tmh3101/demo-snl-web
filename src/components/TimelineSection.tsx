@@ -35,11 +35,10 @@ const TimelineItem: FC<TimelineItemProps> = ({ event }) => {
     <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-start">
       {/* Content - Left or Right based on position */}
       <div
-        className={`${
-          isLeft
-            ? "lg:text-right lg:pr-12 pt-4"
-            : "lg:pl-12 pt-4 order-1 lg:order-2"
-        }`}
+        className={`${isLeft
+          ? "lg:text-right lg:pr-12 pt-4"
+          : "lg:pl-12 pt-4 order-1 lg:order-2"
+          }`}
       >
         <span className="text-primary text-4xl lg:text-6xl font-black opacity-30 block mb-2">
           {event.year}
@@ -48,9 +47,8 @@ const TimelineItem: FC<TimelineItemProps> = ({ event }) => {
           {event.title}
         </h4>
         <p
-          className={`text-base lg:text-lg text-slate-400 font-light leading-relaxed mb-6 lg:mb-8 max-w-md ${
-            isLeft ? "lg:ml-auto" : ""
-          }`}
+          className={`text-base lg:text-lg text-slate-400 font-light leading-relaxed mb-6 lg:mb-8 max-w-md ${isLeft ? "lg:ml-auto" : ""
+            }`}
         >
           {event.description}
         </p>
@@ -66,20 +64,18 @@ const TimelineItem: FC<TimelineItemProps> = ({ event }) => {
         </button>
 
         {/* Activity Details - Expandable */}
-        <div 
-          className={`transition-all duration-500 ease-in-out overflow-hidden ${
-            isExpanded ? 'max-h-[1000px] opacity-100 mt-8' : 'max-h-0 opacity-0'
-          }`}
+        <div
+          className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[1000px] opacity-100 mt-8' : 'max-h-0 opacity-0'
+            }`}
         >
           {event.activities && event.activities.length > 0 && (
-            <div className={`glass-card rounded-lg border border-primary/20 p-6 ${
-              isLeft ? 'lg:ml-auto lg:mr-0' : 'lg:mr-auto lg:ml-0'
-            } max-w-xs`}>
-              <h5 className="text-[10px] font-black uppercase tracking-widest text-primary mb-4 flex items-center gap-1.5">
-                <span className="material-symbols-outlined text-xs">history</span>
+            <div className={`glass-card rounded-xl border border-primary/20 p-6 lg:p-8 ${isLeft ? 'lg:ml-auto lg:mr-0' : 'lg:mr-auto lg:ml-0'
+              } max-w-[430px]`}>
+              <h5 className="text-sm font-black uppercase tracking-widest text-primary mb-6 flex items-center gap-2">
+                <span className="material-symbols-outlined text-base">history</span>
                 Nhật ký hoạt động
               </h5>
-              <div className="space-y-1 max-h-[180px] overflow-y-auto overflow-x-hidden px-2 custom-scrollbar">
+              <div className="space-y-5 max-h-[320px] overflow-y-auto overflow-x-hidden px-3 custom-scrollbar">
                 {event.activities.map((activity, idx) => {
                   const iconMap = {
                     water: { icon: "water_drop", color: "text-blue-400" },
@@ -87,45 +83,38 @@ const TimelineItem: FC<TimelineItemProps> = ({ event }) => {
                     bug: { icon: "bug_report", color: "text-red-400" }
                   };
                   const activityIcon = iconMap[activity.type];
-                  
+
                   return (
-                    <div 
-                      key={idx} 
-                      className={`relative pb-1 ${
-                        isLeft 
-                          ? 'pr-3 border-r-2 border-primary/20 last:border-r-0' 
-                          : 'pl-3 border-l-2 border-primary/20 last:border-l-0'
-                      } last:pb-0`}
+                    <div
+                      key={idx}
+                      className={`relative pb-5 ${isLeft
+                        ? 'pr-5 border-r-2 border-primary/30 last:border-r-0'
+                        : 'pl-5 border-l-2 border-primary/30 last:border-l-0'
+                        } last:pb-0`}
                     >
                       {/* Timeline dot with icon */}
-                      <div className={`absolute top-0 w-4 h-4 rounded-full bg-forest-dark border-2 border-primary flex items-center justify-center ${
-                        isLeft 
-                          ? 'right-0 translate-x-[5px]' 
-                          : 'left-0 -translate-x-[5px]'
-                      }`}>
-                        <span className={`material-symbols-outlined text-xs leading-none ${activityIcon.color}`} style={{ fontSize: '8px' }}>
+                      <div className={`absolute top-0 w-6 h-6 rounded-full bg-forest-dark border-2 border-primary flex items-center justify-center shadow-lg shadow-primary/20 ${isLeft
+                        ? 'right-0 translate-x-[7px]'
+                        : 'left-0 -translate-x-[7px]'
+                        }`}>
+                        <span className={`material-symbols-outlined leading-none ${activityIcon.color}`} style={{ fontSize: '12px' }}>
                           {activityIcon.icon}
                         </span>
                       </div>
-                      
-                      <div className="flex items-start justify-between gap-1 flex-wrap">
-                        <div className="flex-1">
-                        <div className={`flex items-center gap-0.5 mb-0 ${
-                            isLeft ? 'justify-end' : 'justify-start'
-                          }`}>
-                            <span className="text-primary/60 text-[12px] font-bold">
-                              {activity.date}
-                            </span>
-                            <span className="text-primary/40 text-[12px]">
-                              {activity.time}
-                            </span>
-                          </div>
-                          <p className={`text-white font-semibold text-[12px] ${
-                            isLeft ? 'text-right' : 'text-left'
-                          }`}>
-                            {activity.action}
-                          </p>
+
+                      <div className={`flex items-center gap-3 ${isLeft ? 'flex-row-reverse' : 'flex-row'}`}>
+                        <div className="flex items-center gap-1.5 shrink-0">
+                          <span className="text-primary text-sm font-bold">
+                            {activity.date}
+                          </span>
+                          <span className="text-primary/50 text-sm">
+                            {activity.time}
+                          </span>
                         </div>
+                        <span className="text-primary/30">•</span>
+                        <p className="text-white font-semibold text-base">
+                          {activity.action}
+                        </p>
                       </div>
                     </div>
                   );

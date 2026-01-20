@@ -177,12 +177,10 @@ export const verificationData = {
 
 // Artisan Data
 export const artisanData = {
-  name: "Ngô Đại Kỳ",
+  name: "Nguyễn Văn A",
   imageUrl:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuB_zTcFqfB_BJIcjkZQuwvcuF47hAjTY8fGqaBO1V2Efzw4mJu5F2pAiZdcwNRD34wznf50Ryae5KMBQNJYrpgIfjOsU95kqNmflQFqjIE5EYUeU1tayLuEBIEdGviHaDDxzyTTxdR9BpUR4z2LmqeKTRI1qIAYnC3HZod7jIB3FwbYjrW16qmgFtJTjM1cnNO5ExbIW1xa0fxVcv8iAYUz9dB3u8_8X_FETt6TP-j-LL19fyL0ATIP9qMBeZ20BlIiQn5zhfXQBOs",
-  experience: "25+ Năm gieo sâm",
-  ethnicity: "Người Tày",
-  area: "Lô số 5",
+  areas: ["Lô số 3", "Lô số 5", "Lô số 7"],
   region: "Đỉnh Ngọc Linh",
 };
 

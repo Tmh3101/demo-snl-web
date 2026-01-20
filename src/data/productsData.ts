@@ -22,9 +22,7 @@ export interface Product {
     artisanData: {
         name: string;
         imageUrl: string;
-        experience: string;
-        ethnicity: string;
-        area: string;
+        areas: string[];
         region: string;
     };
     distributorData: {
@@ -72,12 +70,10 @@ const sharedVerificationData = {
 
 // Shared artisan data
 const sharedArtisanData = {
-    name: "Ngô Đại Kỳ",
+    name: "Nguyễn Văn A",
     imageUrl:
         "https://lh3.googleusercontent.com/aida-public/AB6AXuB_zTcFqfB_BJIcjkZQuwvcuF47hAjTY8fGqaBO1V2Efzw4mJu5F2pAiZdcwNRD34wznf50Ryae5KMBQNJYrpgIfjOsU95kqNmflQFqjIE5EYUeU1tayLuEBIEdGviHaDDxzyTTxdR9BpUR4z2LmqeKTRI1qIAYnC3HZod7jIB3FwbYjrW16qmgFtJTjM1cnNO5ExbIW1xa0fxVcv8iAYUz9dB3u8_8X_FETt6TP-j-LL19fyL0ATIP9qMBeZ20BlIiQn5zhfXQBOs",
-    experience: "25+ Năm gieo sâm",
-    ethnicity: "Người Tày",
-    area: "Lô số 5",
+    areas: ["Lô số 3", "Lô số 5", "Lô số 7"],
     region: "Đỉnh Ngọc Linh",
 };
 
@@ -110,6 +106,7 @@ const product1: Product = {
                 { icon: "bug_report", label: "Sâu bệnh", variant: "warning" },
             ],
             activities: [
+                { date: "01/03/2015", time: "06:00", action: "Gieo hạt", type: "agriculture" },
                 { date: "15/03/2015", time: "06:30", action: "Làm cỏ", type: "agriculture" },
                 { date: "22/03/2015", time: "07:00", action: "Tưới nước", type: "water" },
                 { date: "10/04/2015", time: "08:15", action: "Làm cỏ", type: "agriculture" },
@@ -149,8 +146,8 @@ const product1: Product = {
                 { icon: "bug_report", label: "Sâu bệnh", variant: "warning" },
             ],
             activities: [
-                { date: "15/01/2025", time: "06:00", action: "Thu hoạch", type: "agriculture" },
-                { date: "15/01/2025", time: "10:00", action: "Cân đo", type: "agriculture" },
+                { date: "15/01/2025", time: "06:00", action: "Tưới nước", type: "water" },
+                { date: "15/01/2025", time: "10:00", action: "Làm cỏ", type: "agriculture" },
             ],
         },
     ],
@@ -184,6 +181,7 @@ const product2: Product = {
             activities: [
                 { date: "10/02/2018", time: "07:00", action: "Gieo hạt", type: "agriculture" },
                 { date: "15/03/2018", time: "06:30", action: "Tưới nước", type: "water" },
+                { date: "20/04/2018", time: "08:00", action: "Làm cỏ", type: "agriculture" },
             ],
         },
         {
@@ -200,13 +198,14 @@ const product2: Product = {
                 { icon: "bug_report", label: "Sâu bệnh", variant: "warning" },
             ],
             activities: [
-                { date: "01/04/2023", time: "05:30", action: "Di chuyển", type: "agriculture" },
-                { date: "10/04/2023", time: "08:00", action: "Phủ mùn", type: "agriculture" },
+                { date: "01/04/2023", time: "05:30", action: "Tưới nước", type: "water" },
+                { date: "10/04/2023", time: "08:00", action: "Làm cỏ", type: "agriculture" },
+                { date: "20/04/2023", time: "07:00", action: "Sâu bệnh", type: "bug" },
             ],
         },
     ],
     verificationData: sharedVerificationData,
-    artisanData: { ...sharedArtisanData, area: "Lô số 3" },
+    artisanData: sharedArtisanData,
     distributorData: sharedDistributorData,
 };
 
@@ -254,12 +253,12 @@ const product3: Product = {
             activities: [
                 { date: "15/01/2024", time: "06:00", action: "Tưới nước", type: "water" },
                 { date: "20/02/2024", time: "07:00", action: "Làm cỏ", type: "agriculture" },
-                { date: "10/04/2024", time: "08:00", action: "Kiểm tra sâu bệnh", type: "bug" },
+                { date: "10/04/2024", time: "08:00", action: "Sâu bệnh", type: "bug" },
             ],
         },
     ],
     verificationData: sharedVerificationData,
-    artisanData: { ...sharedArtisanData, area: "Lô số 7" },
+    artisanData: sharedArtisanData,
     distributorData: sharedDistributorData,
 };
 
@@ -287,14 +286,14 @@ const product4: Product = {
             ],
             activities: [
                 { date: "10/11/2024", time: "06:00", action: "Gieo hạt", type: "agriculture" },
-                { date: "15/11/2024", time: "07:00", action: "Che phủ lá", type: "agriculture" },
-                { date: "20/11/2024", time: "06:30", action: "Tưới nước", type: "water" },
-                { date: "01/12/2024", time: "07:00", action: "Kiểm tra nảy mầm", type: "agriculture" },
+                { date: "15/11/2024", time: "07:00", action: "Tưới nước", type: "water" },
+                { date: "20/11/2024", time: "06:30", action: "Làm cỏ", type: "agriculture" },
+                { date: "01/12/2024", time: "07:00", action: "Sâu bệnh", type: "bug" },
             ],
         },
     ],
     verificationData: sharedVerificationData,
-    artisanData: { ...sharedArtisanData, area: "Lô số 9" },
+    artisanData: sharedArtisanData,
     distributorData: sharedDistributorData,
 };
 

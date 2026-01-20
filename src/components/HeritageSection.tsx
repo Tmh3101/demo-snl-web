@@ -4,9 +4,7 @@ import pharmalogo from "/images/trungson-logo.png"
 interface ArtisanInfo {
   name: string;
   imageUrl: string;
-  experience: string;
-  ethnicity: string;
-  area: string;
+  areas: string[];
   region: string;
 }
 
@@ -48,14 +46,22 @@ const HeritageSection: FC<HeritageSectionProps> = ({
               <h3 className="text-3xl lg:text-5xl font-black mb-6 lg:mb-8 tracking-tighter">
                 {artisan.name}
               </h3>
-              <div className="grid grid-cols-2 gap-y-6 lg:gap-y-10 gap-x-8 lg:gap-x-12">
+              <div className="space-y-6 lg:space-y-8">
                 <div>
-                  <h4 className="text-slate-500 text-[10px] uppercase tracking-widest font-black mb-2">
-                    Lô quản lí
+                  <h4 className="text-slate-500 text-[10px] uppercase tracking-widest font-black mb-3">
+                    Các lô quản lý
                   </h4>
-                  <p className="text-lg lg:text-2xl font-bold text-white">
-                    {artisan.area}
-                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {artisan.areas.map((area, index) => (
+                      <span
+                        key={index}
+                        className="inline-flex items-center px-3 py-1.5 bg-primary/10 border border-primary/30 rounded-lg text-primary text-sm font-semibold"
+                      >
+                        <span className="material-symbols-outlined text-sm mr-1.5">grid_view</span>
+                        {area}
+                      </span>
+                    ))}
+                  </div>
                 </div>
                 <div>
                   <h4 className="text-slate-500 text-[10px] uppercase tracking-widest font-black mb-2">

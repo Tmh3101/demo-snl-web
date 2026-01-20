@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #d6931f;
+  --color-forest-dark: #0c1a14;
+  --color-forest-medium: #1a3629;
+  --color-forest-light: #2d5f46;
+  --font-family-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --radius: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-family-sans);
+    background-color: var(--color-forest-dark);
+    color: white;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-forest-dark);
+  }
+}
+
+@layer components {
+  .bg-forest-gradient {
+    background: radial-gradient(circle at center, #1a3629 0%, #0c1a14 100%);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 40px rgba(214, 147, 31, 0.25);
+  }
+
+  .timeline-line {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      #d6931f 10%,
+      #d6931f 90%,
+      transparent
+    );
+  }
+
+  .timeline-dot {
+    @apply absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-forest-dark border-2 border-primary rounded-full z-10;
+    box-shadow: 0 0 15px rgba(214, 147, 31, 0.5);
+  }
+
+  @keyframes float-ginseng {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-float-ginseng {
+    animation: float-ginseng 4s ease-in-out infinite;
+  }
+
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(214, 147, 31, 0.4), rgba(214, 147, 31, 0.2));
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(214, 147, 31, 0.6), rgba(214, 147, 31, 0.4));
+  }
+
+  /* Firefox scrollbar */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(214, 147, 31, 0.3) transparent;
+  }
+}

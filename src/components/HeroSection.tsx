@@ -26,10 +26,6 @@ const HeroSection: FC<HeroSectionProps> = ({
             <span className="text-xs lg:text-sm font-bold tracking-[0.2em] text-white uppercase">
               Sản phẩm chính hãng
             </span>
-            {/* <span className="hidden sm:block h-4 w-px bg-white/20 mx-2"></span>
-            <span className="text-xs lg:text-sm font-mono text-primary">
-              {productCode}
-            </span> */}
           </div>
 
           {/* Title */}
@@ -50,11 +46,13 @@ const HeroSection: FC<HeroSectionProps> = ({
 
           {/* Blockchain Hash */}
           <div className="flex flex-col gap-3 lg:gap-4">
-            <span className="text-[18px] text-slate-500 uppercase tracking-[0.4em] font-bold">
+            <span className="text-base lg:text-xl text-slate-300 ml-1 uppercase tracking-[0.1em] font-black flex items-center gap-2">
               Mã định danh duy nhất
             </span>
-            <div className="bg-white/5 border border-white/10 p-3 lg:p-4 rounded-xl lg:rounded-2xl w-fit font-mono text-primary text-lg lg:text-lg flex items-center gap-3 lg:gap-4 max-w-full overflow-hidden">
-              <span className="truncate">{productCode}</span>
+            <div className="bg-primary/20 border-2 border-primary/50 p-3 lg:p-4 rounded-xl lg:rounded-2xl w-fit font-mono text-lg lg:text-xl font-bold flex items-center gap-3 lg:gap-4 max-w-full overflow-hidden shadow-lg shadow-primary/20">
+              <span className="material-symbols-outlined text-xl text-primary">fingerprint</span>
+              <div className="w-px h-6 bg-primary/50"></div>
+              <span className="truncate text-primary">{productCode}</span>
             </div>
           </div>
         </div>

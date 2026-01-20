@@ -65,7 +65,6 @@ const ProductListPage: FC = () => {
             <Footer
                 productCode="SNL-2025"
                 blockchainHash="0x..."
-                companyName="Trung Sơn Pharma"
             />
         </>
     );

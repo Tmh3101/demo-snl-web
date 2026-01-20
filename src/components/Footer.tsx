@@ -3,13 +3,11 @@ import type { FC } from "react";
 interface FooterProps {
   productCode: string;
   blockchainHash: string;
-  companyName: string;
 }
 
 const Footer: FC<FooterProps> = ({
-//   productCode,
+  //   productCode,
   blockchainHash,
-  companyName,
 }) => {
   return (
     <footer className="w-full bg-forest-dark border-t border-white/5 py-12 lg:py-16">
@@ -17,21 +15,22 @@ const Footer: FC<FooterProps> = ({
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12">
           {/* Logo & Copyright */}
           <div className="flex flex-col gap-2 items-center lg:items-start text-center lg:text-left">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="bg-primary p-2 rounded">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="bg-primary p-2 rounded w-10 h-10">
                 <span className="material-symbols-outlined text-forest-dark text-lg lg:text-xl font-bold">
                   verified
                 </span>
               </div>
               <span className="font-black text-xl lg:text-2xl tracking-tighter">
-                {companyName.split(" ").slice(0, -1).join(" ")}{" "}
+                {/* {companyName.split(" ").slice(0, -1).join(" ")}{" "} */}
                 <span className="text-primary">
-                  {companyName.split(" ").slice(-1)}
+                  {/* {companyName.split(" ").slice(-1)} */}
+                  SamSam
                 </span>
               </span>
             </div>
             <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">
-              © {new Date().getFullYear()} {companyName}. All Rights Reserved.
+              © {new Date().getFullYear()} SamSam. All Rights Reserved.
             </p>
           </div>
 
